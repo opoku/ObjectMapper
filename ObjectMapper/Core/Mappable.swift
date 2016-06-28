@@ -21,7 +21,7 @@ public protocol Mappable {
 
 public extension Mappable {
 	
-	public static func objectForMapping(map: Map) -> Mappable? {
+	public static func objectForMapping(_ map: Map) -> Mappable? {
 		return nil
 	}
 	

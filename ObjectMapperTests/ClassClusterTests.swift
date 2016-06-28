@@ -63,7 +63,7 @@ class Vehicle: Mappable {
 	
 	var type: String?
 	
-	class func objectForMapping(map: Map) -> Mappable? {
+	class func objectForMapping(_ map: Map) -> Mappable? {
 		if let type: String = map["type"].value() {
 			switch type {
 				case "car":
@@ -90,7 +90,7 @@ class Car: Vehicle {
 	
 	var name: String?
 	
-	override class func objectForMapping(map: Map) -> Mappable? {
+	override class func objectForMapping(_ map: Map) -> Mappable? {
 		return nil
 	}
 	

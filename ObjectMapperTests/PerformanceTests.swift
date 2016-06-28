@@ -128,7 +128,7 @@ class PersonCluster: Mappable {
 		
 	}
 	
-	static func objectForMapping(map: Map) -> Mappable? {
+	static func objectForMapping(_ map: Map) -> Mappable? {
 		return PersonCluster()
 	}
 	
