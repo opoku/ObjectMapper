@@ -34,14 +34,14 @@ public class URLTransform: TransformType {
 
 	public init() {}
 
-	public func transformFromJSON(value: AnyObject?) -> NSURL? {
+	public func transformFromJSON(_ value: AnyObject?) -> NSURL? {
 		if let URLString = value as? String {
 			return NSURL(string: URLString)
 		}
 		return nil
 	}
 
-	public func transformToJSON(value: NSURL?) -> String? {
+	public func transformToJSON(_ value: NSURL?) -> String? {
 		if let URL = value {
 			return URL.absoluteString
 		}

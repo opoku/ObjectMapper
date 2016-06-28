@@ -34,19 +34,19 @@ public class DateTransform: TransformType {
 
 	public init() {}
 
-	public func transformFromJSON(value: AnyObject?) -> NSDate? {
+	public func transformFromJSON(_ value: AnyObject?) -> NSDate? {
 		if let timeInt = value as? Double {
-			return NSDate(timeIntervalSince1970: NSTimeInterval(timeInt))
+			return NSDate(timeIntervalSince1970: TimeInterval(timeInt))
 		}
 		
 		if let timeStr = value as? String {
-			return NSDate(timeIntervalSince1970: NSTimeInterval(atof(timeStr)))
+			return NSDate(timeIntervalSince1970: TimeInterval(atof(timeStr)))
 		}
 		
 		return nil
 	}
 
-	public func transformToJSON(value: NSDate?) -> Double? {
+	public func transformToJSON(_ value: NSDate?) -> Double? {
 		if let date = value {
 			return Double(date.timeIntervalSince1970)
 		}
